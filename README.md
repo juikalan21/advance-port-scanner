@@ -24,10 +24,10 @@ if __name__ == '__main__':
 "parser = optparse.OptionParser('Usage of program: ' + '-H <target host> -p <target ports>')"
 This is the simple usage of program that will get printed out once th user actually specifies the command wrong, or doesn't really know how the program works.
 Specify the -H to the target host which is the IP address of the host we want to scan
-and -p to the target port. Now, we have to add both of the options to our parser.  We will use the 'if' function to check wheather the user specified the correct arguments for the program. 
+and -p to the target port. Now, we have to add both of the options to our parser.  We will use the 'if' function to check whether the user specified the correct arguments for the program. 
 
 5.  Then, let us create the port scan function. 
- What if the user specifies a domain name instead of the IP address? We want to resolve the domain name and get the IP address of the target. For example, if a user type -H for the host and after that types google.com, if our program did not resolve google.com into an IP address, it will crash and it won't be able to scan as the program has noidea what google.com is! To solve this we will use our function 'gethostbyname' in the variable 'tgtIP'. But still there are chances it can crash so let's use 'try and except' rule.
+ What if the user specifies a domain name instead of the IP address? We want to resolve the domain name and get the IP address of the target. For example, if a user type -H for the host and after that types google.com, if our program did not resolve google.com into an IP address, it will crash and it won't be able to scan as the program has no idea what google.com is! To solve this we will use our function 'gethostbyname' in the variable 'tgtIP'. But still there are chances it can crash so let's use 'try and except' rule.
 
  def portScan(tgtHost, tgtPorts):
         try:
