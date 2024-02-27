@@ -21,7 +21,7 @@ if __name__ == '__main__':
         main()
 
 4.  The command:
-parser = optparse.OptionParser('Usage of program: ' + '-H <target host> -p <target ports>')
+"parser = optparse.OptionParser('Usage of program: ' + '-H <target host> -p <target ports>')"
 This is the simple usage of program that will get printed out once th user actually specifies the command wrong, or doesn't really know how the program works.
 Specify the -H to the target host which is the IP address of the host we want to scan
 and -p to the target port. Now, we have to add both of the options to our parser.  We will use the 'if' function to check wheather the user specified the correct arguments for the program. 
